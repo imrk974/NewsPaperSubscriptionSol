@@ -52,11 +52,11 @@ public class ReadPriceDetailsFromJson {
 			if (js.getString("paperName").equals(paperName)) {
 				priceMap.put("weekdaysRate", js.getJSONObject("Param").getInt("weekdaysRate"));
 				priceMap.put("Saturdayrate", js.getJSONObject("Param").getInt("Saturdayrate"));
-				priceMap.put("SundayRate",js.getJSONObject("Param").getInt("SundayRate"));
+				priceMap.put("SundayRate", js.getJSONObject("Param").getInt("SundayRate"));
 				break;
 			}
 		}
 		return priceMap;
-		
+
 	}
 }
