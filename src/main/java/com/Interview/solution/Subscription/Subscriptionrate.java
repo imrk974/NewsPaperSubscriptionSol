@@ -81,13 +81,13 @@ public class Subscriptionrate  extends ReadPriceDetailsFromJson {
 	public double finalSubscriptionChargeForAllPapers(List<String> papers) {
 		int finalcharge = 0;
 		for (int i =0; i < papers.size(); i++) {
-			finalcharge += totalSubscriptionChargeforCurrentMonth(papers.get(i));
+			finalcharge += totalSubscriptionCharge(papers.get(i));
 		}
 		
 		return finalcharge;
 	}
 	
-	private double totalSubscriptionChargeforCurrentMonth(final String paperName) {
+	private double totalSubscriptionCharge(final String paperName) {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		String dateInString = "01-01-2020";
 		String dateInString2 = "31-01-2020";
